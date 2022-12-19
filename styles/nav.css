@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu',sans-serif;
+}
+:root{
+  --unsa: #b60303;
+  --white: #fff;
+  --grey: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+body{
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.container{
+  position: relative;
+  width: 100%;
+}
+.navigation{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  width: 280px;
+  border-radius: 15px;
+  box-sizing: initial;
+  background: var(--unsa);
+  transition: 0.5s;
+}
+.navigation.active{
+  width: 70px;
+}
+
+.navigation ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 20px;
+}
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.navigation ul li.active{
+  background: var(--white);
+}
+/* Primer elemento no sea seleccionado */
+.navigation ul li:nth-child(1){
+  margin-bottom: 40px;
+  pointer-events: none;
+  font-size: large;
+  font-weight: bold;
+}
+.navigation ul li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+}
+.navigation ul li.active a{
+  color: var(--unsa);
+}
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 78px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+  font-size: 1.75em;
+}
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+/* curva para cada seleccion  */
+/* .navigation ul li:hover a::before, */
+.navigation ul li.active a::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 45px;
+  height: 50px;
+  background: transparent;
+  border-radius: 35%;
+  box-shadow: 35px 35px 0 10px var(--white);
+}
+/* .navigation ul li:hover a::after, */
+.navigation ul li.active a::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 45px;
+  height: 50px;
+  background: transparent;
+  border-radius: 25%;
+  box-shadow: 35px -35px 0 10px var(--white);
+}
+
+
+/* main */
+.main{
+  position: absolute;
+  width: calc(100% - 317px);
+  padding-top: 20px;
+  left: 300px;
+  min-height: 100vh;
+  /* background: #999; */
+  background: var(--white);
+  transition: 0.5s;
+}
+.main.active{
+  width: calc(100% - 90px);
+  left: 90px;
+  background: var(--white);
+}
+.topbar{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.toggle{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 25%;
+  /* color: #fff; */
+  /* background: var(--unsa); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+.search{
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+.search label{
+  position: relative;
+  width: 100%;
+}
+.search label input{
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid var(--black2);
+}
+.search label ion-icon{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.user-container{
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.user img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Cards */
+.cardBox{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 30px;
+}
+.cardBox .card{
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 7px 25px rgba(145, 3, 3, 0.75);
+}
+.cardBox .card .numbers{
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+.cardBox .card .iconBx{
+  font-size: 3.5rem;
+  color: var(--black2);
+}
+.cardBox .card:hover{
+  background-color: var(--unsa);
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx{
+  color: var(--white);
+}
+
+
+/* Responsive Design para tablets y iPads*/
+@media (max-width: 991px){
+  .navigation{
+    left: -300px;
+  }
+  .navigation.active{
+    width: 300px;
+    left: 0;
+  }
+  .main{
+    width: 100%;
+    left: 0;
+  }
+  .main.active{
+    left: 315px;
+  }
+  .cardBox{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .navigation.active{
+    left: 15px;
+  }
+  /*  left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+  } */
+}
+
+@media (max-width: 768px){
+  .details{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .recentOrders{
+    overflow-x: auto;
+  }
+  .status.inprogress{
+    white-space: nowrap;
+  }
+  .navigation.active{
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+/* Responsive Design para smartphones */
+@media (max-width: 480px){
+  .cardBox{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .cardHeader h2{
+    font-size: 20px;
+  }
+  .user{
+    min-width: 40px;
+  }
+  .navigation{
+    width: 100%;
+    left: 100%;
+    z-index: 1000;
+  }
+  .navigation.active{
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+    width: 100%;
+    left: 0;
+  }
+  .toggle{
+    z-index: 10001;
+  }
+  .main.active .toggle{
+    position: fixed;
+    right: 0;
+    left: initial;
+    color: var(--white);
+  }
+  .user-container span{
+    display: none;
+  }
+  .user-container{
+    width: 40px;
+  }
+}
+
+.img-container {
+  width: 600px;
+  height: 50%;
+  /* background-color: aquamarine; */
+  padding: 20px;
+}
+
+img.img_inicio{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+

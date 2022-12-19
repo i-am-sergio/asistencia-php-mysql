@@ -1,0 +1,15 @@
+html{
+  scroll-behavior: smooth;
+}
+.iconarriba ion-icon{
+  width: 45px;
+  height: 45px;
+  color: var(--unsa);
+  position: fixed;
+  bottom: 10px;
+  right: -100px;
+  transition: 1s;
+}
+.iconarriba ion-icon:hover {
+  color: var(--black1);
+}

@@ -1,0 +1,66 @@
+:root{
+  --unsa: #b60303;
+}
+.container_tabla{
+  width: 100%;
+  /* background-color: aquamarine; */
+}
+.tabla-estudiantes{
+  width: 100%;
+  padding: 50px;
+  /* text-align: center; */
+}
+
+#tablaEstudiantes thead tr th{
+  background-color: rgb(49, 49, 49);
+  color: #fff;
+  height: 40px;
+}
+#tablaEstudiantes tbody tr td {
+  height: 25px;
+  background-color: rgb(232, 232, 232);
+}
+
+#tablaEstudiantes tbody tr .id{
+  width: 80px;
+  text-align: center;
+  background-color: rgb(255, 208, 208);
+}
+#tablaEstudiantes tbody tr .apellidos {
+  width: 250px
+} 
+#tablaEstudiantes tbody tr .nombres {
+  width: 200px
+} 
+#tablaEstudiantes tbody tr .semestre {
+  width: 200px;
+  text-align: center;
+} 
+#tablaEstudiantes tbody tr .btns {
+  width: 100px;
+  text-align: center;
+  background-color: rgb(232, 232, 232);
+} 
+#tablaEstudiantes tbody tr td {
+  height: 25px;
+}
+.btns .btn-en-tabla {
+  width: 60%;
+  border: 1px solid #b60303;
+  border-radius: 5px;
+  height: 20px;
+}
+.btns .btn-en-tabla:hover {
+  background-color: var(--unsa);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.container_tabla.cursos {
+  width: 100%;
+  padding: 20px 80px;
+}
+.container_tabla.estadisticas{
+  width: 100%;
+  padding: 10px 160px;
+}

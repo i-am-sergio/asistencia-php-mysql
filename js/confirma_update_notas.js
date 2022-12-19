@@ -1,0 +1,1 @@
+alert("Se actualizaron las notas");

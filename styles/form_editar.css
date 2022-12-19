@@ -1,0 +1,56 @@
+:root{
+  --unsa: #b60303;
+  --white: #fff;
+  --grey: #f5f5f5;
+  --black1: #222;
+  --black2: rgb(124, 124, 124);
+}
+.form_editar_alumno{
+  color: var(--white);
+  width: 100%;
+  /* background-color: aquamarine; */
+  text-align: center;
+}
+
+#formulario_edicion{
+  width: 75%;
+  margin: 0 auto;
+  background-color: var(--black2);
+}
+
+#formulario_edicion .label{
+  /* display: inline-flex; */
+  font-size: 18px;
+  width: 150px;
+  height: 30px;
+  background-color: var(--unsa);
+  text-align: center;
+  padding: 10px;
+  margin: 5px 0;
+  outline: none;
+  border-radius: 10px;
+}
+
+#formulario_edicion input{
+  width: 110px;
+  height: 37px;
+  border-style: none;
+  margin: 5px;
+  border-radius: 10px;
+  margin: 8px 5px;
+  text-align: center;
+  /* padding-left: 5px; */
+}
+#btnGuardar{
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  border: 1px solid transparent;
+  /* border-radius: 10px; */
+  /* padding: 0 10px; */
+}
+#btnGuardar:hover{
+  background-color: var(--white);
+  border: 1px solid var(--unsa);
+  cursor: pointer;
+}
