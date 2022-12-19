@@ -2,7 +2,7 @@
 include("BaseDatos.php");
 include("../view_asistencia.php");
 
-$BaseDatos = new baseDEdatos("localhost","root","","sistemaasistencia");
+$BaseDatos = new baseDEdatos("containers-us-west-63.railway.app","root","1lxgtDdvtmTjqBU5Jw6s","railway");
 $BaseDatos->conectar();
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){

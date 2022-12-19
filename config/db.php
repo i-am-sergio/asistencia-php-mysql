@@ -6,7 +6,7 @@ class BaseDatos{
   public static function crearInstancia(){
     if(!isset(self::$instancia)){ //si la instancia tiene algo?
       $opciones[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-      self::$instancia = new PDO('mysql:host=localhost;dbname=sistemaasistencia','root','',$opciones);
+      self::$instancia = new PDO('mysql:host=containers-us-west-63.railway.app;dbname=railway','root','1lxgtDdvtmTjqBU5Jw6s',$opciones);
       //exec("SET NAMES utf8");
       //echo "Conexion satisfactoria a la Base de Datos ...";
     }

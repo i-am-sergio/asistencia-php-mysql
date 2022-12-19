@@ -7,10 +7,10 @@ class Conexion{
   protected $conexion;
 
   public function __construct(){
-    $this->host = "localhost";
-    $this->db = "sistemaasistencia";
+    $this->host = "containers-us-west-63.railway.app";
+    $this->db = "railway";
     $this->usuario = "root";
-    $this->password = "";
+    $this->password = "1lxgtDdvtmTjqBU5Jw6s";
     try {
       $this->conexion = new PDO ("mysql:host=".$this->host."; dbname=".$this->db,$this->usuario,$this->password);
       $this->conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
